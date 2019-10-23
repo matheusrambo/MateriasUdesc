@@ -1,0 +1,18 @@
+Funcionarios(#Codigo, nome, [cnh], rua, bairro, tipo, [NroContrato])
+Emails(#CodEmail, &CodigoFuncionario, email)
+
+Cardapios(#DiaSemana, NroRefeicoes, &CodigoEfetivo)
+Preparação(#&CodigoFuncionario, #&DiaSemana)
+
+Alimentos(#Codigo, nome)
+Menu(#&DiaSemana, #&CodigoAlimento, quantidade)
+
+Fornecedores(#Codigo, CNPJ, RazaoSocial)
+Distribuidoras(#Codigo, CNPJ, RazaoSocial)
+Fornecimentos(#&CodigoAlimento, #&CodigoFornecedor, #data, preco, quantidade,[&CodigoDistribuidora])
+
+
+RI's:
+-> Funcionario.tipo = 1 --> Efetivo, NroContrato == Null
+-> Funcionario.tipo = 2 --> Estagiario, NroContrato != Null
+-> Cardapios.CodigoEftivo refere-se a um funcionario tipo == 1.

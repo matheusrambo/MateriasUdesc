@@ -1,0 +1,106 @@
+---------------------1-----------------------------
+Restricao Alimentares(#idRestricao, descricao)
+
+Substituicao(#&IdAliSubstituido, #&IdAliSubstituto)
+
+Intolerancias(#&idRestricao, #&idAlimento)
+
+Alimento(#idAlimento, nome, unidadeMedida, caloriasPorUnidade)
+
+Proibidos(#&idRestricao, #&idPrato)
+
+Pratos(#idPrato, nome, descricao)
+
+Menu Pratos(#dia, #&idPrato, #&idDieta, horario)
+
+Classe(#&idAlimento, #&idCat)
+
+Categorias(#idCat, nome)
+
+Menu Natural(#dia, #&idDieta, #&idAlimento, horario, instrucaoConsumo, quantidade)
+
+Conteudo nutricional(#&idPrato, #&idNutrientes)
+
+Dietas(#idDietas, responsavelTecnico, nome)
+
+Nutrientes(#idNutriente, nome)
+
+---------------------2-----------------------------
+
+Fabricantes(#CNPJ, nome, rua, nro, bairro)
+
+Produtos(#numero, nomeComercial, tipoEmbalagem, precoUnitario, tipo)
+
+RI: - Produtos.tipo = 1 se Medicamentos e tem tarja,formula.
+
+     - Produtos.tipo = 2 se Perfumes e tem sexo, intensidade
+
+Receitas Medicas(#nrReceita, CRMMedico, data)	
+
+Vendas(#nroNota, data, nomeCliente, emailsCliente)
+
+Estetica(#&nroNota, imposto, qtd)
+
+Tratamento(#&nroNota,#&[nrReceita], qtd, imposto)
+
+---------------------3-----------------------------
+
+Pessoa(#codcliente, nome,tipo)
+RI: - Pessoa.tipo = 1 se Física e tem CPF
+     - Pessoa.tipo = 2 se Jurídica e tem CNPJ, razãoSocial.
+
+Venda(#dtHoraEmissao, #&codProduto, #&codCliente, qtd)
+
+Produtos(#CodProduto, nome, qtdDisponivel, peso, altura, largura, profundidade, unidMedida, precoUnidCompra, precoUnidVenda)
+
+Empresas(#CNPJ, razaoSocial)
+
+Compra(#&codProduto, #&CNPJempresa, #dtHoraEmissao, qtd, dtPrevEntrega)
+
+---------------------4-----------------------------
+
+Clientes(#codInterno, endereco, nome, tipo)
+
+RI: - Clientes.tipo = 1 se física e tem cpf, ct_nasc e sexo
+
+Clientes.tipo = 2 se jurídica e tem cnpj
+
+Veiculos(#placa, nrMotor, cor, kmAtual, chassi)
+
+Revisões(#codRevisão, descricao, nome)
+
+TipoVeiculo(#codigoTipo, tempoLimpeza, kmMediaDiaria)
+
+RI: - TipoVeiculo.tipo = 1 se passeio e tem nPassageiros, tamanho, portas, acessórios
+
+TipoVeiculo.tipo = 2 se carga e tem cargaMaxima
+
+Filiais(#codFilial, nome)
+
+Reservas(#dtHoraRetirada, dtHoraEntrega)
+
+Agendamento(#dataHora)
+
+Manutenção(#&idRevisao)
+
+---------------------5-----------------------------
+
+Voos(#codVoo, ciaAerea)
+
+Alocação(#coddAlocacao, diaSemana, &codVoo)
+
+Trechos(#codTrecho, &siglaAeroOrigem, hrPartida, &siglaAeroDestino, hrChegada)
+
+Itinerarios(#&codTrecho, #&codVoo, &codAeronave)
+
+Aeroportos(#sigla, nome, capacidade, &codCid)
+
+Cidades(#codCid, estado, pais, clima, nome)
+
+Aeronaves(#codAeronave, modelo, autorização, capacidade, ano)
+
+Assentos(#idAssento, classe, &codAeronave)
+
+Reservas(#codigo, nomePass, prazoValidade, emitido)
+
+Escalas(#&codigo, #&codTrecho,[&idAssento])
