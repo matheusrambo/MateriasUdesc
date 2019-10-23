@@ -1,0 +1,10 @@
+Elabore os seguintes algoritmos e analise o seu tempo de
+execução para diferentes entradas e determine a sua
+complexidade de tempo:
+
+a. Implemente um algoritmo (função) que recebe como parâmetro
+dois valores inteiros a e b e calcula a^b
+
+b. Implemente um algoritmo (função) que recebe duas matrizes
+quadradas de mesma ordem (n x n) e realiza a multiplicação
+entre elas.
