@@ -1,0 +1,8 @@
+Q1. Use algum resultado para mostrar que a função f(x) = (x^5)-4x-3 possui pelo menos uma raiz
+entre a=0.048 e b=2.157. Em seguida, use o método da bisseção para encontrar uma estimativa para
+uma raiz da função f contida no intervalo [a,b]. Pare após 8 iterações. Qual das alternativas a seguir
+corresponde ao ponto médio do intervalo [a8,b8]?
+
+Q2. Considerando os dados do exercício anterior, quantas repetições devemos realizar para que |pn - p|<(10^(-15)),
+isto é, qual é o menor valor de n para o qual a distância entre o ponto médio pn do n-ésimo subintervalo e a raiz 
+exata p da função é no máximo (10^(-15)).
