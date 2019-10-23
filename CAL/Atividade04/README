@@ -1,0 +1,10 @@
+Elabore um algoritmo recursivo para “gerar as posições de
+marcação de uma régua” com comprimento informado por
+parâmetro (posição esq/dir). A função recursiva receberá a altura
+inicial efetuando a marcação central com esta altura. Divida a
+régua em 4 partes e efetue uma nova marcação central com altura –
+1 em cada parte. E assim sucessivamente... Faça enquanto altura da
+marca é maior que zero. Imprima na tela a posição da marca e sua
+respectiva altura para testar. Após implementar o algoritmo,
+escreva a relação de recorrência e a respectiva complexidade do
+algoritmo para o pior caso.
