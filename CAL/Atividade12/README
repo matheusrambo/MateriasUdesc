@@ -1,0 +1,9 @@
+Considere as strings genoma e feature que representam,
+respectivamente, uma parte do genoma de uma criatura e uma
+determinada característica de interesse. Deseja-se descobrir
+qual é a maior subsequência comum (sequencia de caracteres
+iguais, mas não necessariamente contíguas) entre essas duas
+cadeias de caracteres:
+
+genoma: ACCUGTATAUCGUCACTU
+feature: GCAUTTC
