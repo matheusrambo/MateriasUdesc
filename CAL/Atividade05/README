@@ -1,0 +1,32 @@
+1)Considere o algoritmo abaixo e descreva a sua relação
+de recorrência, sua complexidade de tempo e espaço
+para o melhor e pior caso:
+
+double foo( int* v, int n, int p){
+	if(n<=0)
+		return 0;
+	int i, soma = 0;
+	for(int i=0; i<n; i=i+p)
+		soma += v[i];
+	return sqrt(soma) + foo(v, soma%n, p);
+}
+
+2)Considere o algoritmo abaixo e descreva a sua relação
+de recorrência, sua complexidade de tempo e espaço
+para o melhor e pior caso:
+
+int pow ( int base, int exp){
+	if(exp==0) return 1;
+	int ret = pow(base, exp/2 );
+	ret = ret * ret;
+	if (exp%2 == 1) ret = ret * base;
+	return ret;
+}
+
+RESPOSTAS:
+1) Recorrência: T(n) = T(n/2) + O(1)
+    Complexidade de Tempo: O(n)
+    Complexidade de Espaço: Θ(log n) 
+2) Recorrência: T(n) = T(n-1) + O(1) 
+    Complexidade de Tempo: O(n²)
+    Complexidade de Espaço: O(n)
