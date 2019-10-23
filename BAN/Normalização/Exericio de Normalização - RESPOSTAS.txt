@@ -1,0 +1,79 @@
+(1) 
+A tabela abaixo é uma tabela Não-Normalizada (NN). Obtenha a 1FN, 2FN, 3FN e 4FN:
+Evento (#codEvento, nomeEvento,
+       (#ID-artigo, título, ano, ID-revisor, nomeRevisor, grauEscolaridadeRevisor, nivelRevisor
+       (#ID-autor, nomeAutor)))
+
+1ªFN:(Eliminar tabelas aninhadas)
+    Eventos(#codEvento, nomeEvento)
+    Artigos(&codEvento, #ID-artigo, titulo, ano, ID-revisor, nomeRevisor, grauEscolaridadeRevisor, nivelRevisor)
+    Autoria(#&ID-artigo, #ID-autor, nomeAutor)
+   
+2ªFN:(Eliminar dependencias funcionais parciais) ****OBS: Só se tem quando possuir 2 ou mais chaves primarias****
+    Eventos(#codEvento, nomeEvento)
+    Artigos(&codEvento, #ID-artigo, titulo, ano, ID-revisor, nomeRevisor, grauEscolaridadeRevisor, nivelRevisor)
+    Autores(#ID-autor, nomeAutor)
+    Autoria(#&ID-artigo, #&ID-autor)
+   
+3ªFN:(Eliminar dependencias funcionais transitivas)
+    Eventos(#codEvento, nomeEvento)
+    Artigos(&codEvento, #ID-artigo, titulo, ano, &ID-Revisor)
+    Revisores(#ID-Revisor, nomeRevisor, grauEscolaridadeRevisor, nivelRevisor)
+    Autores(#ID-autor, nomeAutor)
+    Autoria(#&ID-artigo, #&ID-autor)
+   
+4ªFN: (dependencias funcionais multivaloradas)
+
+____________________________________||___________________________________________________
+
+(2)
+NÑ:
+Cliente(#ID-cliente, Nome, Telefone(#ID-DVD, Nome, Gênero, Duração, Categoria, Preço, DataRetirada))
+
+1ªFN:
+
+Cliente(#ID-cliente, Nome, Telefone)
+
+DVDsReservados(#ID-DVD, &ID-cliente, Nome, Gênero, Duração, Categoria, Preço, DataRetirada)
+
+2ªFN:
+
+Cliente(#ID-cliente, Nome, Telefone)
+
+DVD(#ID-DVD, nome, gênero, duração, categoria, preço)
+
+Reservas(&ID- Cli, &#ID-DVD, #dataRetirada)
+
+3ªFN 
+
+Cliente(#ID-cliente, Nome, Telefone)
+
+DVD(#ID-DVD, nome, gênero, duração, &categoria)
+
+Reservas(&ID- Cli, &#ID-DVD, #dataRetirada)
+
+Categoria (#categoria, preço)
+
+_____________________________________||___________________________________________________
+
+(3)
+NÑ:
+Roteiros(#codigo, nome, duracao, (dataSaida, vagas, preco), (numeroOrdem, nome, estado, populacao, tempoEstadia))
+
+1ªFN:
+
+Roteiro(#codigo, nome, duracao)
+
+Pacotes(&#codigo-Roteiro,#dataSaida, vagas, preco)
+
+Trechos(&codigo-Roteiro, #numeroOrdem, nome, estado, populacao, tempoEstadia)
+
+2ªFN:
+
+Roteiro(#codigo, nome, duracao)
+
+Pacotes(&#codigo-Roteiro,#dataSaida, vagas, preco)
+
+Cidades(#codCidade, nome, estado, populacao)
+
+Trechos(&#codigo-Roteiro, #numeroOrdem, &codCidade, tempoEstadia)
