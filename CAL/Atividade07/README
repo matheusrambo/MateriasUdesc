@@ -1,0 +1,5 @@
+Analise o código fonte do arquivo estruturas-dados.cpp e
+informe as complexidades de tempo e espaço dos seguintes
+métodos considerando o pior e melhor caso. Ilustre um
+exemplo de situação onde o pior caso e o melhor caso
+ocorreria para cada uma das funções.
