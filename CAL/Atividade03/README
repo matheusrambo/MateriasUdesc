@@ -1,0 +1,4 @@
+Escreva duas versões do algoritmo de fibonacci: a
+versão “ruim” apresentada e uma versão “boa”
+usando vetores. Faça uma comparação de tempo de
+execução com valores entre 25 e 60.
