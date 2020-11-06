@@ -1,0 +1,93 @@
+1) 
+Construção do grafo:
+	- os véstives são as transações
+	- as arestas são as operações em conflito
+É serializada em conflito?
+	- sem ciclo: é seriazilizável
+	- com ciclo: não é serializável
+	
+Como o grafo não tem cíclo, ele é serializável em conflito.
+
+################################################
+
+2)
+t1	|      t2
+r(x)	|
+	|    r(x)
+w(x)  	|
+      	|    w(x)
+r(y)    |
+w(y)  	|
+
+
+
+             
+t1	|      t2
+r(x)	|
+w(x)	|    
+  	|    r(x)
+      	|    w(x)
+r(y)    |
+w(y)  	|
+
+
+
+t1	|      t2
+	|    r(x)
+r(x)	|   
+w(x)  	|
+      	|    w(x)
+r(y)    |
+w(y)  	|
+
+
+
+t1	|      t2
+r(x)	|
+	|    r(x)
+  	|    w(x)
+w(x)    |   
+r(y)    |
+w(y)  	|
+
+
+
+t1	|      t2
+	|    r(x)
+r(x)	|   
+  	|    w(x)
+w(x)   	|
+r(y)    |
+w(y)  	|
+
+##############################################
+
+3) 
+3.1) (t1)----x----->(t2)
+   (t2)----x----->(t3)
+   (t3)----x----->(t1)
+   (t1)----x----->(t3)
+não é serializável
+
+3.2) (t1)----x----->(t2)
+   (t1)----x----->(t3)
+   (t3)----x----->(t1)
+não é serializável
+
+3.3) (t2)----x----->(t1)
+   (t2)----x----->(t3)
+   (t3)----x----->(t1)
+é serializável
+Plano serial equivalente:
+   (t2)------->(t3)------->(t1)
+
+#################################################
+
+4)
+4.1) (t1)----z---->(t2)
+     (t3)----x---->(t1)
+     (t3)----y---->(t2)
+é serializável em conflito
+Plano serial equivalente
+(t3)----->(t1)----->(t2)
+

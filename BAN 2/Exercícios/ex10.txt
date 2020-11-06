@@ -1,0 +1,28 @@
+1)
+UNDO: T3, T2
+REDO: T4
+
+A=20 - 20
+B=12 - 12
+C=30  - 30
+D=15 15 - 15
+
+b)
+UNDO:
+NO-REDO: T4,T3,T2
+A=22 40 55 - 55
+B=18 38 - 38
+C=34 - 34
+D=30 33 -  33
+
+c)
+UNDO: T5
+REDO: 
+A: ?
+B: 18 - 18
+C: 13 - 13
+D: ?
+
+2) Operação refazer
+
+3) A opção 3 é a verdadeira.
