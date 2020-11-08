@@ -1,0 +1,27 @@
+Hospede(#id_hospede, nome, telefone, endereco)
+
+Frigobar(#id_frigobar)
+
+Itens(#id_item, nome)
+
+Tipo_quarto(#id_tipo_quarto, descricao)
+
+Acompanhantes(#id_acompanhante, nome, id_hospede)
+    id_hospede referencia Hospede
+
+Itens_frigobar(#id_itens_frigobar, id_item, id_frigobar, quantidade)
+	id_item referencia Itens
+	id_frigobar referencia Frigobar
+
+Quarto(#id_quarto, quant_camas, preco, descricao, comodidade, id_tipo_quarto, id_frigobar)
+    id_tipo_quarto referencia Tipo_quarto
+    id_frigobar referencia Frigobar
+
+Reserva(#id_reserva, pago, desconto, data_entrada, data_saida, id_hospede)
+    id_hospede referencia Hospede
+
+Quartos(#id_quartos, id_quarto, id_reserva)
+    id_quarto referencia Quarto
+    id_reserva referencia Reserva
+
+
