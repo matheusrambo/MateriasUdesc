@@ -1,0 +1,14 @@
+[
+   {
+          "id_tipo_quarto":1,
+          "descricao":"Quarto para casal"
+   },
+   {
+          "id_tipo_quarto":2,
+          "descricao":"Quarto com 2 quartos"
+   },
+   {
+          "id_tipo_quarto":3,
+          "descricao":"Quarto com 3 quartos"
+   }
+]

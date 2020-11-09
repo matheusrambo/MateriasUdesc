@@ -1,0 +1,32 @@
+[
+   {
+          "id_itens_frigobar":1,
+          "id_frigobar_fk":1,
+          "id_item_fk":1,
+          "quantidade":4
+   },
+   {
+          "id_itens_frigobar":2,
+          "id_frigobar_fk":1,
+          "id_item_fk":2,
+          "quantidade":4
+   },
+   {
+          "id_itens_frigobar":3,
+          "id_frigobar_fk":2,
+          "id_item_fk":2,
+          "quantidade":4
+   },
+   {
+          "id_itens_frigobar":4,
+          "id_frigobar_fk":2,
+          "id_item_fk":3,
+          "quantidade":4
+},
+{
+          "id_itens_frigobar":5,
+          "id_frigobar_fk":3,
+          "id_item_fk":3,
+          "quantidade":4
+}
+]

@@ -1,0 +1,18 @@
+[
+   {
+          "id_quartos":1,
+          "id_quarto_fk":1,
+          "id_reserva_fk":1
+
+   },
+   {
+          "id_quartos":2,
+          "id_quarto_fk":2,
+          "id_reserva_fk":2
+   },
+   {
+          "id_quartos":3,
+          "id_quarto_fk":3,
+          "id_reserva_fk":3
+   }
+]

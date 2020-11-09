@@ -1,0 +1,30 @@
+[
+   {
+          "id_acompanhantes":1,
+          "cpf":"12345678978",
+          "nome":"Gustavo medeiros",
+          "idade":26,
+          "id_hospede_fk":1
+   },
+   {
+          "id_acompanhantes":2,
+          "cpf":"02589456123",
+          "nome":"Juliana Barbosa da Costa",
+          "idade":50,
+          "id_hospede_fk":2
+   },
+   {
+          "id_acompanhantes":3,
+          "cpf":"45698712598",
+          "nome":"Carla da Costa",
+          "idade":12,
+          "id_hospede_fk":2
+   },
+   {
+          "id_acompanhantes":3,
+          "cpf":"45698712598",
+          "nome":"Marcio Roberto",
+          "idade":20,
+          "id_hospede_fk":3
+   }
+]

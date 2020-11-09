@@ -1,0 +1,14 @@
+[
+   {
+        "id_item":1,
+        "nome":"Cerveja Skol"
+   },
+   {
+        "id_item":2,
+        "nome":"Coca-Cola"
+   },
+   {
+        "id_item":3,
+        "nome":"Aguá Mineral Sem Gás"
+   }
+]

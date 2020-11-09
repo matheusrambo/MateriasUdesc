@@ -1,0 +1,26 @@
+[
+   {
+        "id_hospede":1,
+        "cpf":"08455517956",
+        "nome":"Andrea Le",
+        "telefone":"997664343",
+        "idade":25,
+        "endereco":"rua borba azul"
+   },
+   {
+        "id_hospede":2,
+        "cpf":"01236589745",
+        "nome":"Paulo da costa",
+        "telefone":"84296542",
+        "idade":55,
+        "endereco":"rua borba azul"
+   },
+   {
+        "id_hospede":3,
+        "cpf":"25874569852",
+        "nome":"Flavio augusto",
+        "telefone":"45896521",
+        "idade":22,
+        "endereco":"rua tamo aqui"
+   }
+]

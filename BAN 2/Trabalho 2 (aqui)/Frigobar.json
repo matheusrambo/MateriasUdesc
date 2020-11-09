@@ -1,0 +1,14 @@
+[
+   {
+          "id_frigobar":1,
+          "descricao":"Frigobar azul 55 L"
+   },
+   {
+          "id_frigobar":2,
+          "descricao":"Frigobar preto 45 L"
+   },
+   {
+          "id_frigobar":3,
+          "descricao":"Frigobar preto 55 L"
+   }
+]
