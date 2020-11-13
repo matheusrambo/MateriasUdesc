@@ -1,0 +1,1 @@
+Ponteiros uma função que retorne um ponteiro para um vetor (invertido do original)
