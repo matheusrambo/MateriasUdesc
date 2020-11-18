@@ -1,0 +1,84 @@
+(* Segunda Prova Métodos Formais
+   Nome: *)
+
+(* Não é permitido importar nenhuma biblioteca, qualquer lema 
+   ou teorema auxiliar deve ser desenvolvido (provados) nesse 
+   arquivo *)
+
+
+(* No Capítulo [IndProp] é apresentado um tipo indutivo ([even]) que 
+   constroi uma prova de que um número natural é par: *)
+
+Inductive even : nat -> Prop :=
+| ev_0 : even 0
+| ev_SS (n : nat) (H : even n) : even (S (S n)).
+
+(* Um tipo indutivo alternativo ([le']) para provar a relação 
+  menor ou igual entre dois números naturais pode ser definido como: *)
+
+Inductive le' : nat -> nat -> Prop :=
+  | le_0' m : le' 0 m
+  | le_S' n m (H : le' n m) : le' (S n) (S m).
+
+(* Usando esses tipos indutivos prove os teoremas abaixo: *)
+
+Theorem O_le_n : forall n,
+  0 <= n.
+Proof.
+  intro n. induction n as [|n' IH].
+  - apply le_n.
+  - apply le_S. apply IH.
+Qed.
+
+Theorem n_le_m__Sn_le_Sm : forall n m,
+  n <= m -> S n <= S m.
+Proof.
+  intros a b H. induction H as [| m Hm IH].
+    - apply le_n.
+    - apply le_S. apply IH.
+Qed.
+
+Lemma le'_n_n : forall a, le' a a.
+Proof.
+  intros a. induction a as [|a' IH].
+  + apply le_0'.
+  + apply le_S'. apply IH.
+Qed.
+
+(* Questão 1 *)
+Lemma le'_n_Sm : forall a b, le' a b -> le' a (S b). 
+Proof.
+  intros a b H. induction H as [|a' b' Hab IH].
+  - apply le_0'.
+  - apply le_S'. apply IH.
+Qed. 
+
+(* Questão 2 *)
+Theorem n_le'_m__Sn_le'_Sm : forall a b, le' a b -> le' (S a) (S b).
+Proof.
+  intros a b H. induction H as [m | n m Hnm IHnm].
+  - apply le_S'. apply le_0'.
+  - apply le_S'. apply IHnm.
+Qed.
+
+(* Questão 3 *)
+Theorem le_le' : forall a b, le a b <-> le' a b.
+Proof.
+  intros a b. split.
+  - intros H. induction H as [|b' Hab IH].
+    + apply le'_n_n.
+    + apply le'_n_Sm in IH. apply IH.
+  - intros H. induction H as [ b' | a' b' Hab IH].
+    + apply O_le_n.
+    + apply n_le_m__Sn_le_Sm. apply IH.
+Qed. 
+
+(* Questão 4 *)
+Theorem ev_ev__ev : forall n m,
+  even (n + m) -> even n -> even m.
+Proof.
+  intros n m H1 H2. induction H2 as [|n' E IH].
+  + simpl in H1. apply H1.
+  + simpl in H1. inversion H1 as [|nm H2]. apply IH in H2.
+    apply H2.
+Qed.
