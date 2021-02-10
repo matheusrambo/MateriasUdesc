@@ -1,0 +1,7 @@
+Para executar o servidor utilize no terminal do linux o comando "python3 server.py"
+Para executar o cliente utilize no terminal do linux o comando "python3 client.py"
+Após executar o cliente registre um usuário novo ou apenas entre com o usuário 
+"root" e senha "root"
+Para baixar um livro pesquise pelo nome, deixei dois livros de exemplo 
+pode pesquisar por "Biblia.txt" ou "Redes de Computadores.txt"
+e então o programa realizará o download.
