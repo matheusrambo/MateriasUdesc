@@ -1,0 +1,27 @@
+; Machine starts in state 0.
+
+; State 0: rejeita se ta em branco
+0 # # r 1
+0 _ _ * reject
+
+; State 1: vai até o final da fita
+1 0 * r 1
+1 1 * r 1
+1 _ * l 2
+
+; State 2: soma do primeiro numero
+2 0 1 l 4
+2 1 0 l 3
+
+; State 3: 
+3 0 0 l 3
+3 1 1 l 3
+3 # * * accept
+
+; State 4:
+4 0 1 l 4
+4 1 0 l 3
+
+accept * * * halt-accept
+
+reject * * * halt-reject
