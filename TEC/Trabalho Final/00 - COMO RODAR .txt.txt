@@ -1,0 +1,13 @@
+Abra o terminal e vá até a pasta do trabalho.
+
+Certifique-se de que o arquivo de entrada esta na mesma pasta.
+
+rode o comando: python3 TrabTEC.py
+
+O programa irá pedir para você digitar a MT de entrada.
+
+Pronto, o programa gerou um arquivo '.txt' com o seguinte formato:
+"nome_arquivo_entrada"Convertido.txt
+
+Ai então esse arquivo '.txt' é o arquivo da convertido 
+de Semi-Infinita para duplamente Infinita ou o contrário.
