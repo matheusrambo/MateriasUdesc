@@ -1,0 +1,10 @@
+Nome: Guilherme Utech e Matheus Rambo
+Para compilar:
+$ make
+Para executar a biblioteca de eperações de matrizes: $./mainEx02 mat_a3x4.example mat_b4x3.example
+Caso queira mult outras matrizes: Por o nome que quiser e rodar da mesma forma, mas sempre mantendo a ordem necessária para multiplicação de matrizes.
+Para fazer multiplicação de submatrizes:$./mainParticionar
+
+Eu deixei a matriz no próprio code.
+
+Para limpar os arquivos: $ make clean
