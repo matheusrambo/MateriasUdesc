@@ -1,0 +1,12 @@
+
+Trabalho de Guilherme Utech e Matheus Rambo
+
+Como rodar o programa:
+	$ make clear	
+	$ make
+	$ make run
+	
+OBSERVAÇÃO:
+O programa não possui a comparação das matrizes.
+Mas abrindo em qualquer editor de texto (Atom, Sublime,VScode)
+Você consegue verificar a diferença.
