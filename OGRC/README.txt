@@ -1,0 +1,1 @@
+Tudo sobre a matéria Optativa de Gerência de redes de computadores
