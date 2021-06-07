@@ -1,0 +1,37 @@
+<html>
+	<head>
+		<title>Cadastro</title>
+	</head>
+	<body background="texture.jpg" BGPROPERTIES= "FIXED">
+		<form method="post" action="Resultado.php">
+			<label>Login <font color="red"> * </font> </label> <input type="text" placeholder="Digite seu login" name="login" value="" size="20" maxlength="30" required />
+			<label>Senha <font color="red"> * </font> </label> <input type="password" placeholder="Digite sua senha" name="senha" required />
+			<label>Confirmação de Senha <font color="red"> * </font> </label> <input type="password" placeholder="Digite sua senha" name="senhaConf" required />
+
+			<hr>
+				<p><label>Nome <font color="red"> * </font> </label> <input type="text" placeholder="Digite seu Nome Completo" name="nomeCompleto" size="30" maxlength="40" required pattern="[A-z\s]+$" /></p>
+				<p><label>Data de Nascimento <font color="red"> * </font> </label> <input type="date" name="dataNascimento" required /></p>
+				<p><label>E-mail <font color="red"> * </font> </label> <input type="email" placeholder="Digite seu email" name="email" size="50" maxlength="80" required /></p>
+				<p><label>Telefone <font color="red"> * </font> </label><input type="tel" placeholder="Ex: (xx)xxxxx-xxxx" name="telefone" value="" size="40" maxlength="150" required pattern="\([0-9]{2}\)[0-9]{4,6}-[0-9]{3,4}$" /></p>
+				<p><label>CEP <font color="red"> * </font> </label><input type="text" placeholder="Ex: xxxxx-xxx" name="CEP" value="" size="40" maxlength="150" required pattern= "\d{5}-?\d{3}" /></p>
+				<p><label>Bairro <font color="red"> * </font> </label><input type="text" placeholder="Digite o nome do Bairro" name="bairro" value="" size="40" maxlength="150" required pattern="[A-z\s]+$" /></p>
+				<p><label>Rua <font color="red"> * </font> </label><input type="text" placeholder="Digite o nome da Rua" name="rua" value="" size="40" maxlength="150" required pattern="[A-z\s]+$" /></p>
+				<p><label>Número <font color="red"> * </font> </label><input type="text" placeholder="Digite o número da sua residência" name="numero" value="" size="40" maxlength="150" required pattern="[0-9]+$" /></p>
+				<p><label>Complemento </label><input type="text" placeholder="Ex: apartamento/apto x" name="complemento" value="" size="40" maxlength="150" /></p>
+				<p>
+					<label>Sexo: </label>
+					<br><input type="checkbox" id="alternativa1" name="alternativaM1" value="Masculino" /> <label for="alternativa1">Masculino</label>
+					<input type="checkbox" id="alternativa2" name="alternativaM2" value="Feminino" /> <label for="alternativa2">Feminino</label>
+					<input type="checkbox" id="alternativa3" name="alternativaM3" value="Outro" /> <label for="alternativa3">Outro</label>
+					<input type="checkbox" id="alternativa4" name="alternativaM4" value="Prefiro não responder" /> <label for="alternativa4">Prefiro não responder</label></br>
+				</p>
+
+				<p><br><label>Personalidade: </label></br><textarea placeholder="Descreva sua personalidade" maxlength='220' name="personalidade" id="" rows="4" cols="60"></textarea></p>
+
+				<input type="submit" name="enviar" value="Salvar"/>
+				<input type="reset" name="resetar" value="Limpar"/>
+			</hr>
+
+		</form>
+	</body>
+</html>
