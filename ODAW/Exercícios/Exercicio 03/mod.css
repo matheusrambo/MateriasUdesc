@@ -1,0 +1,91 @@
+*{margin: 0; padding: 0;}
+ /*
+ head {
+ background-image: url(texture.png);
+ background-repeat: no-repeat;
+ background-position: top right;
+ font-size: 14px;
+ text-align: right;
+ width: 140px;
+ padding-right: 35px;
+}
+ */
+ 
+ head{
+	border:2px solid #c0c0c0; 
+	margin-left: 100px;
+ }
+ 
+body{
+font-family: arial, helvetica, sans-serif;
+font-size: 12px;
+}
+ 
+.menu{
+list-style:none; 
+border:2px solid #c0c0c0; 
+margin-left: 100px;
+float:left; 
+}
+
+.menu li{
+position:relative; 
+float:left; 
+border-right:1px solid #c0c0c0; 
+}
+
+/* especificações do texto */ 
+.menu li a{color:#333; text-decoration:none; padding:6px 12px; display:block;}
+ 
+ /* caixas e contornos de texto */
+.menu li a:hover{
+background:#333; 
+color:#fff; 
+-moz-box-shadow:0 3px 10px 0 #CCC; 
+-webkit-box-shadow:0 3px 10px 0 #ccc; 
+text-shadow:0px 0px 5px #fff; 
+}
+/* formatação do menu*/
+.menu li ul{
+position:absolute; 
+top:25px; 
+left:0;
+background-color:#fff; 
+display:none;
+}   
+
+/* Sub menus, pois o display não está definido como block */
+.menu li:hover ul, .menu li.over ul{display:block;}
+
+.menu li ul li{
+border:1px solid #c0c0c0; 
+display:block; 
+width:150px;
+}
+
+/* ELEMENTOS DO SITE */
+
+	.section{
+		border:1px solid #c0c0c0;
+		height: 800px;
+		width: 1200px;
+	}*/
+
+	.article{
+		border:1px solid #c0c0c0;
+		margin-top: 100px;
+		margin-right: 560px;
+		margin-left: 200px;
+	}
+	
+	.aside{
+		border:1px solid #c0c0c0;
+		margin-left: 775px;
+		margin-bottom: 50px;
+	}
+	
+	footer{
+		border:1px solid #c0c0c0;
+		margin-right: 300px;
+		margin-left: 400px;
+	}
