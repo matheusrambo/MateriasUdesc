@@ -1,0 +1,49 @@
+Section {
+	padding: 6pt;
+}
+
+Header {
+	font-family: serif;
+	font-size: 14pt;
+	font-weight: bold;
+	color: #ff0000;
+	text-align: center;
+	padding: 6pt;
+	border-top: solid;
+	border-bottom: solid;
+	position: relative;
+}
+
+Article {
+	font-family: serif;
+	font-size: 12pt;
+	font-weight: bold;
+	text-align: center;
+	color: #ff0000;
+	position: relative;
+	padding: 3pt;
+	position: relative;
+}
+
+Footer {
+	font-family: serif;
+	font-size: 12pt;
+	font-weight: bold;
+	color: #ff0000;
+	text-align: center;
+	border-top: solid;
+	border-bottom: solid;
+	position: relative;
+	padding: 10pt;
+}
+
+.cabeca {
+	font-family: monospace;
+	font-size: 20pt;
+}
+
+.info {
+	font-family: monospace;
+	font-size: 16pt;
+	color: #000000;
+}
