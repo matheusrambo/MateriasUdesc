@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+
+<head>
+
+    <script>
+
+    function reverse(str) {
+        var resultElement = document.getElementById('reversed');
+        str = document.getElementById('toReverse').value;
+        str = str.split("");
+        str = str.reverse();
+        str = str.join("");
+        resultElement.innerHTML = str;
+	}
+
+    function strLength(str) {
+		var resultElement = document.getElementById('textlen');
+		str = document.getElementById('strlen-input').value;
+		var size = str.length;
+		resultElement.innerHTML = size;
+	}
+
+    function upperString(str) {
+        var resultElement = document.getElementById('upperStr');
+        str = document.getElementById("toUpper").value;
+        var res = str.toUpperCase();
+        resultElement.innerHTML = res;
+}
+
+    </script>
+
+</head>
+
+<body>
+
+    <h1>Manipulação de strings</h1>
+    <h3>Crie um novo exemplo de uso de Javascript com manipulação de Strings ou Vetores.</h3>
+    <br>
+    <hr>
+
+    <div>
+        <h2>Inversor de String</h2>
+        <input class="input" id="toReverse" type="text" placeholder="">
+        <p>Texto invertido: <span id="reversed"></span></p>
+        <button type="button" onclick="reverse()">Inverter!</button>
+    </div>
+    <br>
+    <hr>
+
+    <div>
+        <h2>Tamanho da String</h2>
+        <input class="input" id="strlen-input" type="text" placeholder="">
+        <p>Tamanho: <span id="textlen"></span></p>
+        <button type="button" onclick="strLength()">Contar!</button>
+    </div>
+    <br>
+    <hr>
+
+    <div>
+        <h2>String em Caixa Alta</h2>
+        <input class="input" id="toUpper" type="text" placeholder="">
+        <p>Texto convertido: <span id="upperStr"></span></p>
+        <button type="button" onclick="upperString()">Converter!</button>
+    </div>
+    <br>
+    <hr>
+
+
+</body>
