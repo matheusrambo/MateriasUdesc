@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+
+<head>
+
+    <script>
+
+        function openPrompt() {
+
+            var val1 = prompt("Entre com um valor inteiro: ", "0");
+            var val2 = prompt("Entre com o valor inteiro a ser somado: ", "0");
+            var soma = parseInt(val1) + parseInt(val2);
+
+            if (soma)
+                document.getElementById("resposta").innerHTML = "Soma: " + soma;
+            else
+                document.getElementById("resposta").innerHTML = "Valores inválidos, tente novamente.";
+        }
+
+    </script>
+
+</head>
+
+<body>
+
+    <h1>Soma de valores inteiros</h1>
+    <h3>Somar 2 números fornecidos pelo usuário:</br>
+      A) utilizar janelas (prompt) OU</br>
+      B) utilizar 'text' em formulário</br>
+      Mostrar resultado como caixa de texto, Alert ou no HTML
+
+</h3>
+    <p>Clique para começar:</p>
+    <button onclick="openPrompt()">Abrir</button>
+    <p id="resposta"></p>
+
+
+</body>
+
+</body>
