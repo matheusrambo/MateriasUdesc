@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+    <head>
+
+    </head>
+	<body>
+
+		<h1>Cálculo do quadrado, cubo e fatorial</h1>
+    <h3>Escreva um script que calcule o quadrado, cubo e fatorial dos números de 0 a 10 e gere a saída em HTML</h3>
+        <hr>
+        <script>
+            var resultList = [];
+
+            for (i = 0; i <= 10; i++) {
+                var numberResult = {};
+                numberResult.square = Math.pow(i,2);
+                numberResult.cube = Math.pow(i,3);
+                numberResult.factorial = factorial(i);
+                numberResult.index = i;
+                resultList.push(numberResult);
+            }
+
+            function factorial(n) {
+                return n ? n * factorial(n - 1) : 1;
+            }
+
+            setTimeout(function(){
+                resultList.forEach(function(obj){
+                    var paragraph = document.createElement("p");
+                    paragraph.innerHTML = "<ul><li>Número: " + obj.index
+                        + "<br>Quadrado: " + obj.square
+                        + "<br>Cubo: " + obj.cube
+                        + "<br>Fatorial: " + obj.factorial;
+                    document.lastChild.appendChild(paragraph);
+                });
+            }, 0);
+
+            </script>
+	</body>
+</head>
+</html>
