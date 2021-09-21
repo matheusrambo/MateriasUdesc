@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+
+<head>
+
+    <script>
+
+    function iterarFrase() {
+
+        var frase = prompt("Entre com a frase a ser iterada: ", "Digite a frase aqui");
+
+        for(i=1; i<=7; i++){
+            var paragraph = document.createElement("p");
+            var res = frase.fontsize(i);
+            paragraph.innerHTML = "Tamanho "+i+": " + res;
+            document.lastChild.appendChild(paragraph);
+        }
+    }
+
+    </script>
+
+</head>
+
+<body>
+
+    <h1>Iteração do tamanho de uma frase </h1>
+    <h3>Para uma frase qualquer escreva com o tamanho FONT de 1 a 7 ou (H1 a H6) através de Javascript, utilizando estrutura de repetição e contadores</h3>
+    <p>Clique para começar:</p>
+    <button onclick="iterarFrase()">Abrir</button>
+
+</body>
