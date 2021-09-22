@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+
+<head>
+
+<title>Exercício 6 - Javascript (Parte 2)</title>
+    <script>
+        function removeDups(str) {
+            var resultElement = document.getElementById('removed');
+            str = document.getElementById('toRemove').value;
+            str = Array.from(new Set(str)).join('');
+            resultElement.innerHTML = str;
+        }
+    </script>
+</head>
+
+<body>
+
+    <div>
+        <h2>Removedor de Duplicatas</h2>
+        <h3>Receba uma String e retorne a String sem os caracteres repetidos</h3>
+        <br>
+        <hr>
+        <input class="input" id="toRemove" type="text" placeholder="Insira o texto aqui">
+        <button type="button" onclick="removeDups()">Remover!</button>
+        <p>Texto sem duplicatas: <span id="removed"></span></p>
+    </div>
+    <br>
+    <hr>
+
+</body>
