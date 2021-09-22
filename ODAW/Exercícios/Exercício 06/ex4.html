@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+
+<head>
+
+<title>Exercício 6 - Javascript (Parte 2)</title>
+
+<script>
+
+    function sortNumber(val){
+
+        var resultElement = document.getElementById('result');
+        val = document.getElementById('val').value;
+        // Tirar formatação
+        val = val.replace(/[^\d]+/g, ',');
+
+        val = val.split(',');
+
+        var resultado = val.sort();
+        resultElement.innerHTML = val.sort();
+    }
+
+</script>
+
+</head>
+
+<body>
+
+    <h2>Ordenação de Números</h2>
+    <h3>Entrada: sequência de números;</br>
+     Saída: Sequência ordenada.</h3>
+    <br>
+    <hr>
+
+    <div>
+        <input class="input" id="val" type="string" placeholder="Formato: 7, 3, 5...">
+        <button type="button" onclick="sortNumber()">Organizar</button>
+        <p>Vetor organizado: <span id="result"></span></p>
+    </div>
+
+</body>
