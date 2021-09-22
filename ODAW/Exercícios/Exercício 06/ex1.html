@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+
+<head>
+
+<title>Exercício 6 - Javascript (Parte 2)</title>
+
+</head>
+
+<body>
+
+    <div>
+        <h2>Jogo do Número</h2>
+        <h3>Acerte o número:</br>
+            - Gerar um número randômico (estabelecer a faixa de valores);</br>
+            - Usuário tenta acertar;</br>
+            - Se errar, mostra uma "dica" - número menor, maior etc;</br>
+            - Finaliza ao acertar o número ou quantidade de tentativas extrapolada.</h3>
+        <br>
+        <hr>
+    </div>
+
+    <li>Você tem o máximo de 10 tentativas.</li>
+    <br>
+    <div class="form">
+        <label for="guessField">Insira um número: </label><input type="text" id="guessField" class="guessField">
+        <input type="submit" value="Tente!" class="guessSubmit">
+      </div>
+
+      <div class="resultParas">
+        <p class="guesses"></p>
+        <p class="lastResult"></p>
+        <p class="lowOrHi"></p>
+      </div>
+
+    <script>
+
+        let randomNumber = Math.floor(Math.random() * 100) + 1;
+
+        const guesses = document.querySelector('.guesses');
+        const lastResult = document.querySelector('.lastResult');
+        const lowOrHi = document.querySelector('.lowOrHi');
+
+        const guessSubmit = document.querySelector('.guessSubmit');
+        const guessField = document.querySelector('.guessField');
+
+        let guessCount = 1;
+        let resetButton;
+
+        guessField.focus();
+
+        function checkGuess() {
+          let userGuess = Number(guessField.value);
+          if (guessCount === 1) {
+            guesses.textContent = 'Números jogados: ';
+          }
+          guesses.textContent += userGuess + ' ';
+
+          if (userGuess === randomNumber) {
+            lastResult.textContent = 'Parabéns, você acertou!';
+            lastResult.style.fontWeight = "1000";
+            lastResult.style.color = "green";
+            lowOrHi.textContent = '';
+            setGameOver();
+          } else if (guessCount === 10) {
+            lastResult.textContent = 'Fim de Jogo - Acabaram as tentativas!';
+            setGameOver();
+          } else {
+            lastResult.textContent = 'Errado!';
+            lastResult.style.fontWeight = "1000";
+            lastResult.style.color = "red";
+            if(userGuess < randomNumber) {
+              lowOrHi.textContent = 'Tente um número maior...';
+            } else if(userGuess > randomNumber) {
+              lowOrHi.textContent = 'Tente um número menor...';
+            }
+          }
+
+          guessCount++;
+          guessField.value = '';
+          guessField.focus();
+        }
+
+        guessSubmit.addEventListener('click', checkGuess);
+
+        function setGameOver() {
+          guessField.disabled = true;
+          guessSubmit.disabled = true;
+          resetButton = document.createElement('button');
+          resetButton.textContent = 'Iniciar Jogo';
+          document.body.append(resetButton);
+          resetButton.addEventListener('click', resetGame);
+        }
+
+        function resetGame() {
+          guessCount = 1;
+
+          const resetParas = document.querySelectorAll('.resultParas p');
+          for (let i = 0 ; i < resetParas.length ; i++) {
+            resetParas[i].textContent = '';
+          }
+
+          resetButton.parentNode.removeChild(resetButton);
+
+          guessField.disabled = false;
+          guessSubmit.disabled = false;
+          guessField.value = '';
+          guessField.focus();
+
+          lastResult.style.backgroundColor = 'white';
+
+          randomNumber = Math.floor(Math.random() * 100) + 1;
+        }
+
+        </script>
+
+</body>
