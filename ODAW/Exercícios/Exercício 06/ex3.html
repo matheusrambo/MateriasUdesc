@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+
+<head>
+
+<title>Exercício 6 - Javascript (Parte 2)</title>
+
+<script>
+
+    function validPassword(){
+        if(checkPassword(document.getElementById('password').value))
+            alert("Senha válida, atende todos os requisitos.");
+        else
+            alert("Senha inválida, não atende os requisitos.");
+    }
+
+    function checkPassword(str) {
+        var re = /(?=.*\d)(?=.*[a-z])(?=.*[!@#$%^&*]).{6,}/g;
+        return re.test(str);
+        }
+</script>
+
+</head>
+
+<body>
+
+    <h2>Validação de senha</h2>
+    <h3>Validar uma senha:</br>
+        - tamanho mínimo de 6 caracteres/dígitos;</br>
+        - ter número;</br>
+        - outra restrição de sua escolha;</h3>
+    <br>
+    <hr>
+
+    <div>
+        <input class="input" id="password" type="text" placeholder="Insira o texto aqui">
+        <button type="button" onclick="validPassword()">Validar senha</button>
+    </div>
+    <br>
+
+</body>
