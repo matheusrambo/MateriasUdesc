@@ -1,0 +1,31 @@
+CREATE DATABASE bar;
+
+use bar;
+
+CREATE TABLE bebidas(cod int auto_increment primary key, nome char(20), preco float, ml int);
+
+INSERT INTO bebidas (nome, preco, ml) VALUES
+	('Agua', 1.50, 600),
+	('Coca', 4.50, 350),
+	('Guarana', 6, 600),
+	('Sprite', 3.50, 350),
+	('Skol', 2.50, 350),
+	('Brahma', 6.50, 1000),
+	('Heineken', 4.50, 350),
+	('Budweiser', 4, 350);
+
+SELECT nome FROM bebidas WHERE preco BETWEEN 3.50 AND 6;
+SELECT * FROM bebidas ORDER BY nome;
+
+DELETE FROM bebidas WHERE ml >= 600 and preco > 6;
+
+UPDATE bebidas SET preco = '7' WHERE nome = 'Brahma';
+UPDATE bebidas SET ml = '1500' WHERE ml >= '1000';
+
+ALTER TABLE bebidas ADD nao_tem BOOLEAN;
+ALTER TABLE bebidas DROP COLUMN nao_tem;
+
+DROP TABLE bebidas;
+DROP DATABASE bar;
+
+_________________________________________________________________________________
