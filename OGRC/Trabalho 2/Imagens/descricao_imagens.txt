@@ -1,0 +1,16 @@
+1 - Mostrando as informacoes do Host VM_TESTE que esta desligada.
+2 - Mostrando todos os Hosts, com localhost UP e VM_TESTE down.
+3 - Mostrando o Mapa dos Hosts para melhor monitoramento e com a VM_TESTE 
+desligada, mostrando o tempo de duracao em que ela esta desligada,
+os ultimos estados checados.
+4 - Mostrando a Aba de Services onde possui a VM_TESTE que esta com estado
+CRITICAL pois esta desligada
+5 - Na Aba de Service/snmp_cpu1 mostrando as informacoes da VM_TETSTE 
+6 - Mesma coisa da imagem 3, dessa vez VM_TESTE esta ligada
+7 - Mesma coisa da imagem 2, dessa vez VM_TESTE esta ligada
+8 - Mesma coisa da imagem 4, dessa vez VM_TESTE esta ligada e o estado da VM
+esta OK pois esta ligada e sem nenhum erro.
+9 - Mesma coisa da imagem 5, dessa vez VM_TESTE esta ligada, observamos que 
+antes de `SNMP OK = 0` temos STRING: `0.00`, o que significa que o uso da 
+VM esta em 0.00, conforme for sendo utilizada vai aumentando esse uso,
+explicamos melhor no video tutorial. 
