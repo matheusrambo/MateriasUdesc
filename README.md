@@ -1,2 +1,1 @@
-# MateriasUdesc
-Tudo sobre as Materias da Udesc já cursadas
+# All about my College
